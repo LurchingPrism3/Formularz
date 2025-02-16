@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html>
 <head>
     <title>Operacje Arytmetyczne</title>
     <style>
@@ -14,31 +15,28 @@
             margin-top: 20px;
         }
         .box {
-            width: 150px;
+            width: 100px;
             height: 100px;
             background-color: #3498db;
             color: white;
             display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
-            font-size: 18px;
-            font-weight: bold;
+            font-size: 20px;
             border-radius: 10px;
-            padding: 10px;
         }
     </style>
 </head>
 <body>
     <h1>Operacje Arytmetyczne</h1>
-
+    
     <div class="container">
         <div class="box" id="dodawanie"></div>
         <div class="box" id="odejmowanie"></div>
         <div class="box" id="mnozenie"></div>
         <div class="box" id="dzielenie"></div>
     </div>
-
+    
     <script>
         function dodaj(a, b) {
             return a + b;
@@ -53,18 +51,16 @@
         }
 
         function podziel(a, b) {
-            return b !== 0 ? (a / b).toFixed(2) : "Nie dziel przez 0";
+            return a / b;
         }
-
+        
         var a = 5;
         var b = 7;
-
-        document.addEventListener("DOMContentLoaded", function() {
-            document.getElementById("dodawanie").textContent = "Dodawanie: " + dodaj(a, b);
-            document.getElementById("odejmowanie").textContent = "Odejmowanie: " + odejmij(a, b);
-            document.getElementById("mnozenie").textContent = "Mnożenie: " + pomnoz(a, b);
-            document.getElementById("dzielenie").textContent = "Dzielenie: " + podziel(a, b);
-        });
+        
+        document.getElementById("dodawanie").textContent = dodaj(a, b);
+        document.getElementById("odejmowanie").textContent = odejmij(a, b);
+        document.getElementById("mnozenie").textContent = pomnoz(a, b);
+        document.getElementById("dzielenie").textContent = podziel(a, b);
     </script>
 </body>
 </html>
