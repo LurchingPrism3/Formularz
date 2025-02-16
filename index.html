@@ -4,7 +4,7 @@
     <title>Operacje Arytmetyczne</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: Arial;
             text-align: center;
             background-color: #f4f4f4;
         }
@@ -57,10 +57,10 @@
         var a = 5;
         var b = 7;
         
-        document.getElementById("dodawanie").textContent = dodaj(a, b);
-        document.getElementById("odejmowanie").textContent = odejmij(a, b);
-        document.getElementById("mnozenie").textContent = pomnoz(a, b);
-        document.getElementById("dzielenie").textContent = podziel(a, b);
+        document.getElementById("dodawanie").textContent = "Dodawanie: " + dodaj(a, b);
+        document.getElementById("odejmowanie").textContent = "Odejmowanie: " + odejmij(a, b);
+        document.getElementById("mnozenie").textContent = "Mnożenie: " + pomnoz(a, b);
+        document.getElementById("dzielenie").textContent = "Dzielenie: " + podziel(a, b);
     </script>
 </body>
 </html>
