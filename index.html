@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<html>
 <head>
     <title>Operacje Arytmetyczne</title>
     <style>
         body {
-            font-family: Arial;
+            font-family: Arial, sans-serif;
             text-align: center;
             background-color: #f4f4f4;
         }
@@ -15,28 +14,31 @@
             margin-top: 20px;
         }
         .box {
-            width: 100px;
+            width: 150px;
             height: 100px;
             background-color: #3498db;
             color: white;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-            font-size: 20px;
+            font-size: 18px;
+            font-weight: bold;
             border-radius: 10px;
+            padding: 10px;
         }
     </style>
 </head>
 <body>
     <h1>Operacje Arytmetyczne</h1>
-    
+
     <div class="container">
         <div class="box" id="dodawanie"></div>
         <div class="box" id="odejmowanie"></div>
         <div class="box" id="mnozenie"></div>
         <div class="box" id="dzielenie"></div>
     </div>
-    
+
     <script>
         function dodaj(a, b) {
             return a + b;
@@ -51,16 +53,18 @@
         }
 
         function podziel(a, b) {
-            return a / b;
+            return b !== 0 ? (a / b).toFixed(2) : "Nie dziel przez 0";
         }
-        
+
         var a = 5;
         var b = 7;
-        
-        document.getElementById("dodawanie").textContent = Dodawanie + dodaj(a, b);
-        document.getElementById("odejmowanie").textContent = Odejmowanie + odejmij(a, b);
-        document.getElementById("mnozenie").textContent = Mnozenie + pomnoz(a, b);
-        document.getElementById("dzielenie").textContent = Dzielenie + podziel(a, b);
+
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("dodawanie").textContent = "Dodawanie: " + dodaj(a, b);
+            document.getElementById("odejmowanie").textContent = "Odejmowanie: " + odejmij(a, b);
+            document.getElementById("mnozenie").textContent = "Mnożenie: " + pomnoz(a, b);
+            document.getElementById("dzielenie").textContent = "Dzielenie: " + podziel(a, b);
+        });
     </script>
 </body>
 </html>
